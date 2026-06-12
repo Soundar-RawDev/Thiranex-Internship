@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal Portfolio Website">
+    <meta name="keywords" content="Portfolio, HTML5, Web Developer">
+    <meta name="author" content="Soundar Rajan">
+
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Soundar Rajan</h1>
+        <p>Frontend Developer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <article>
+                <p>
+                    I am an Electronics and Communication Engineering student
+                    interested in Frontend Development and IoT projects.
+                </p>
+            </article>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Smart AC Automation</h3>
+                <p>
+                    ESP32-based Smart AC system that adjusts temperature
+                    automatically.
+                </p>
+            </article>
+
+            <article>
+                <h3>E-Commerce Website</h3>
+                <p>
+                    Responsive shopping website built using HTML, CSS,
+                    and JavaScript.
+                </p>
+            </article>
+        </section>
+
+        <!-- Aside -->
+        <aside>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </aside>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form aria-label="Contact Form">
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    aria-required="true">
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-required="true">
+
+                <br><br>
+
+                <label for="message">Message:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    aria-required="true"></textarea>
+
+                <br><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Soundar Rajan. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
