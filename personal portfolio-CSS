@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Personal Portfolio Website">
+<meta name="keywords" content="Portfolio, HTML, CSS, Responsive Design">
+<meta name="author" content="Soundar Rajan">
+
+<title>Soundar Rajan Portfolio</title>
+
+<style>
+
+/* CSS Variables */
+:root{
+    --bg-color:#f4f4f4;
+    --text-color:#333;
+    --card-color:#fff;
+    --primary:#007bff;
+}
+
+.dark-mode{
+    --bg-color:#121212;
+    --text-color:#fff;
+    --card-color:#1e1e1e;
+    --primary:#00bfff;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header button{
+    margin-top:15px;
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* Navigation */
+nav{
+    background:#222;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li{
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:15px;
+}
+
+nav ul li a:hover{
+    background:#444;
+}
+
+/* Grid Layout */
+main{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+/* Sections */
+section,aside{
+    background:var(--card-color);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Flexbox Projects */
+.projects{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.project-card{
+    flex:1 1 250px;
+    background:#e8e8e8;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Contact Form */
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,textarea{
+    margin-top:10px;
+    padding:10px;
+}
+
+button.submit-btn{
+    margin-top:10px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    main{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Soundar Rajan</h1>
+    <p>Frontend Developer | ECE Student</p>
+
+    <button onclick="document.body.classList.toggle('dark-mode')">
+        Toggle Dark Mode
+    </button>
+</header>
+
+<nav aria-label="Main Navigation">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <article>
+        <p>
+            I am Soundar Rajan, an Electronics and Communication Engineering student.
+            I am passionate about Frontend Development, IoT Projects and Web Technologies.
+        </p>
+    </article>
+</section>
+
+<br>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <article class="project-card">
+            <h3>Smart AC Automation</h3>
+            <p>
+                ESP32 based Smart AC system that automatically adjusts
+                temperature according to room conditions.
+            </p>
+        </article>
+
+        <article class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>
+                Responsive shopping website built using HTML, CSS and JavaScript.
+            </p>
+        </article>
+
+        <article class="project-card">
+            <h3>Weather App</h3>
+            <p>
+                Real-time weather application with responsive design.
+            </p>
+        </article>
+
+    </div>
+</section>
+
+<br>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form aria-label="Contact Form">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button class="submit-btn" type="submit">
+            Send Message
+        </button>
+
+    </form>
+</section>
+
+</div>
+
+<aside id="skills">
+    <h2>Skills</h2>
+
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>ESP32</li>
+        <li>IoT Development</li>
+    </ul>
+
+    <br>
+
+    <h2>Education</h2>
+
+    <p>
+        B.E. Electronics and Communication Engineering
+    </p>
+
+    <p>
+        R.M.D Engineering College
+    </p>
+</aside>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Soundar Rajan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
